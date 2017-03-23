@@ -1,8 +1,8 @@
 .catalog:
   name: "ECR Credential Updater"
-  version: "v2.0.0"
+  version: "v0.1.0"
   description: "Updates credentials for ECR in Rancher"
-  uuid: ecr-3
+  minimum_rancher_version: "v1.5.0"
   questions:
     - variable: "aws_access_key_id"
       label: "AWS Access Key ID"
@@ -23,7 +23,7 @@
     - variable: "auto_create"
       label: "Auto Create"
       description: "Automatically create registry in Rancher for corresponding ECR repo if it doesn't already exist"
-      default: "true"
+      default: "false"
       required: true
       type: "string"
     - variable: "log_level"
